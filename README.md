@@ -3,4 +3,7 @@
 <ul>
   <li>Daniel Salas</li>
   <li>Franz Laura</li>
+  <li>Emerson Almeida</li>
+  <li>Rober Contreras</li>
+  <li>Ismael Erazo</li>
 </ul>
