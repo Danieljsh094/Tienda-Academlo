@@ -33,9 +33,21 @@
 
 .logo2{
     object-fit: cover;
-    height: 100px;
+    height: 130px;
 }
 
 .navigator img{
     margin-right: 30px;
 }
+
+#menu{
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    border: 1px solid gray;
+    background-color: #F9FAFC;
+    width: 100px;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+
