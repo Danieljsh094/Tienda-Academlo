@@ -1,5 +1,23 @@
-*{
-    font-family: Arial, Helvetica, sans-serif;
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55?styles=16008,15981,15999,30130');
+
+/* General */
+:root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --mandy-light-red: #EB4A5A;
+    --catskill-white-light-blue: #F9FAFC;
+    --hint-red-light: #F6F3F3;
+    --tundora: #434343;
+    --Astronaut: #274671;
+    --iron: #Cecfcf;
+    --sm: 14px;
+    --md: 24px;
+    --bld: 20px;
+    --rg: 16px;
+}
+
+body{
+    font-family: 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -10,9 +28,10 @@
     align-items: center;
     width: max-content;
     width: 100%;
-    height: 30px;
+    height: 40px;
     margin: 0 auto;
-    background-color: #F9FAFC;
+    position: fixed;
+    background-color: var(--catskill-white-light-blue);
 }
 
 .logo1{
@@ -21,6 +40,12 @@
     height: 30px;
 }
 
+/* header{
+    padding-top: 40px;
+    position: sticky;
+    z-index: -1;
+} */
+
 .header{
     display: flex;
     justify-content: center;
@@ -28,11 +53,12 @@
     width: max-content;
     width: 100%;
     height: 200px;
-    background-color: #EB4A5A;
+    background-color: var(--mandy-light-red);
 }
 
 .logo2{
     object-fit: cover;
+    margin-top: 20px;
     height: 130px;
 }
 
@@ -42,12 +68,23 @@
 
 #menu{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     cursor: pointer;
-    border: 1px solid gray;
-    background-color: #F9FAFC;
-    width: 100px;
+    border: 1px solid var(--iron);
+    background-color: var(--white);
+    width: 190px;
+    height: 30px;
     padding-left: 5px;
     border-radius: 5px;
 }
 
+.contains{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
+
+.subtitle{
+    font-size: var(--bld);
+}
