@@ -86,6 +86,16 @@ body{
     margin: 20px;
 }
 
-.subtitle{
+.subtitle {
     font-size: var(--bld);
+}
+
+.products {
+    display: grid;
+    gap: 26px;
+    place-content: center;
+    margin-top: 20px;
+    width: max-content;
+    width: 350px;
+    border: 10px solid gray;
 }
