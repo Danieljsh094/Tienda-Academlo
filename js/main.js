@@ -15,7 +15,7 @@ async function getApi() {
 async function main() {
     const products = await getApi();
     console.log(products);
-    const section = document.querySelector('.product');
+    const section = document.querySelector('.shoping');
     console.log(section);
     let html = '';
     // console.log(html);

@@ -6,16 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./js/main.js" defer></script>
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55?styles=16008,15981,15999,30130" rel="stylesheet">
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./css/style.css">
     <title>Academlo Store</title>
 </head>
 <body>
-    <nav class="navigator">
+    <!-- navbar -->
+    <nav class="nav">
         <img class="logo1" src="./img/logo_nombre.png" alt="logo_nombre">
-        <img src="./img/bx-cart.svg" alt="cart">
+        <i class='bx bx-cart-alt' id="cart-icon"></i>
     </nav>
+    <!-- Header -->
     <header class="header"><img class="logo2" src="./img/logo_blanco.png" alt="logo"></header>
-    <div class="contains">
+    <!-- category -->
+    <div class="category">
         <h2 class="subtitle">Todos nuestros productos</h2>
         <select name="menu" id="menu">
             <option value="all">Todos</option>
@@ -24,9 +29,11 @@
             <option value="hooded-sweatshirts">Sudaderas con capuchas</option>
         </select>
     </div>
-    <section class="products">
-        <div class="product"></div>
+    <!-- products -->
+    <section class="container">
+        <div class="shoping"></div>
     </section>
+    <!-- button  -->
     <button class="btn2">Mas productos</button>
 </body>
 </html>

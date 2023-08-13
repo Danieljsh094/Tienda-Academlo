@@ -23,7 +23,8 @@ body{
     box-sizing: border-box;
 }
 
-.navigator{
+/* navbar */
+.nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,13 +33,22 @@ body{
     height: 40px;
     margin: 0 auto;
     position: fixed;
+    z-index: 1;
     background-color: var(--catskill-white-light-blue);
 }
 
+/* logo-academlo */
 .logo1{
     margin-left: 30px;
     object-fit: cover;
     height: 30px;
+}
+
+/* cart-icon */
+#cart-icon{
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 30px;
 }
 
 /* header{
@@ -47,6 +57,7 @@ body{
     z-index: -1;
 } */
 
+/* header */
 .header{
     display: flex;
     justify-content: center;
@@ -57,16 +68,14 @@ body{
     background-color: var(--mandy-light-red);
 }
 
+/* logo-blanco-acemlo */
 .logo2{
     object-fit: cover;
     margin-top: 20px;
     height: 130px;
 }
 
-.navigator img{
-    margin-right: 30px;
-}
-
+/* Menu  */
 #menu{
     display: flex;
     align-items: center;
@@ -79,23 +88,56 @@ body{
     border-radius: 5px;
 }
 
-.contains{
+/* Category */
+.category{
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 20px;
 }
 
+/* Subtitle */
 .subtitle {
     font-size: var(--bld);
 }
 
-.products {
-    display: grid;
-    gap: 26px;
-    place-content: center;
-    margin-top: 20px;
-    width: max-content;
-    width: 350px;
-    border: 10px solid gray;
+/* Container-Products */
+.container {
+   max-width: 1068px;
+   margin: auto;
+   width: 100%;
 }
+
+/* Products */
+.shoping{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
+}
+
+/* Product */
+.product{
+    position: relative;
+    background-color: var(--iron);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.product:hover{
+    padding: 10px;
+    border: 1px solid var(--black);
+    transition: 0.4s;
+}
+
+/* image */
+img {
+    max-width: 100%;
+}
+
+.product_img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+
