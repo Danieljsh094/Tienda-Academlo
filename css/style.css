@@ -148,15 +148,15 @@ body{
 
 /* Container-Products */
 .container {
-   max-width: 1068px;
-   margin: auto;
-   width: 100%;
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
 }
 
 /* Products */
 .shoping{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     gap: 1.5rem;
     height: 20px;
 }
@@ -176,13 +176,17 @@ body{
 
 /* image */
 img {
-    max-width: 100%;
+    max-width: 80%;
 }
 
 .product_img{
     width: 100%;
     height: auto;
     margin-bottom: 0.5rem;
+}
+
+.product_description {
+    max-width: 80%;
 }
 
 
