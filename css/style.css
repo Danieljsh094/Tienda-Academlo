@@ -87,7 +87,7 @@ body{
     height: 90vh;
     width: 40%;
     position: fixed;
-    top: 65px;
+    top: 50px;
     overflow-y: scroll;
     transition: 0.5s;
     box-shadow: 5px 10px 20px 0px var(--tundora);
@@ -97,8 +97,24 @@ body{
     align-items: center;
 }
 
-.nav-cart--visible {
+.nav-cart-visible {
     left: 60%;
+}
+
+.empty-button {
+    border: none;
+    width: 150px;
+    padding: 10px;
+    background-color: var(--mandy-light-red);
+    color: var(--white);
+    border-radius: 20px;
+    margin: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.empty-button:hover {
+    transform: scale(1.1);
 }
 
 /* header */
@@ -189,4 +205,45 @@ img {
     max-width: 80%;
 }
 
+/* Media queries */
+@media screen and (max-width: 1920px) {
+    .nav-cart {
+        width: 20%;
+    }
+    .nav-cart-visible {
+        left: 80%;
+    }
+}
+@media screen and (max-width: 1360px) {
+    .nav-cart {
+        width: 30%;
+    }
+    .nav-cart-visible {
+        left: 70%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .nav-cart {
+        width: 35%;
+    }
+    .nav-cart-visible {
+        left: 65%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .nav-cart {
+        width: 45%;
+    }
+    .nav-cart-visible {
+        left: 55%;
+    }
+}
+@media screen and (max-width: 574px) {
+    .nav-cart {
+        width: 80%;
+    }
+    .nav-cart-visible {
+        left: 20%;
+    }
+}
 
