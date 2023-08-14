@@ -1,6 +1,27 @@
-
-
+// URL base
 const base_url = 'https://ecommercebackend.fundamentos-29.repl.co';
+// Mostrar y ocultar carrito
+const navToggle = document.querySelector(".nav-button--toggle");
+const navCar = document.querySelector(".nav-cart");
+// Carrito de compras
+const car = document.querySelector("#cart");
+const carList = document.querySelector("#list-cart");
+// Vaciar carrito
+const emptyCarButton = document.querySelector("#empty-cart");
+// Cart counter
+const carCounter = document.querySelector("#counter");
+// Array Carrito
+// Necesitamos tener  un array que reciba los elementos que debo introducir en el carrito de compras.
+
+// let carProducts = [];
+// // Ventana modal
+// const modalContainer = document.querySelector("#modal-container");
+// const modalElement = document.querySelector("#modal-element");
+// let modalDetails = [];
+
+// navToggle.addEventListener("click", () => {
+//     navCar.classList.toggle("nav-car--visible")
+// })
 
 async function getApi() {
     try {

@@ -21,16 +21,17 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: var(--white);
 }
 
 /* navbar */
-.nav{
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: max-content;
     width: 100%;
-    height: 40px;
+    height: 50px;
     margin: 0 auto;
     position: fixed;
     z-index: 1;
@@ -38,24 +39,67 @@ body{
 }
 
 /* logo-academlo */
-.logo1{
+.logo1 {
     margin-left: 30px;
     object-fit: cover;
-    height: 30px;
+    height: 50px;
 }
 
 /* cart-icon */
-#cart-icon{
-    font-size: 1.5rem;
+#cart-icon {
+    font-size: 2.0rem;
     cursor: pointer;
     margin-right: 30px;
 }
 
-/* header{
-    padding-top: 40px;
-    position: sticky;
-    z-index: -1;
-} */
+/* button-cart  */
+.nav-button {
+    background-color: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--tundora);
+    transition: 0.5s;
+}
+
+.nav-button:hover {
+    transform: scale(1.2);
+}
+
+/* cart-counter */
+.cart-counter {
+    background-color: var(--Astronaut);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 12px;
+    position: absolute;
+    right: 20px;
+}
+
+/* nav-cart-list */
+.nav-cart {
+    background-color: var(--hint-red-light);
+    height: 90vh;
+    width: 40%;
+    position: fixed;
+    top: 65px;
+    overflow-y: scroll;
+    transition: 0.5s;
+    box-shadow: 5px 10px 20px 0px var(--tundora);
+    left: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-cart--visible {
+    left: 60%;
+}
 
 /* header */
 .header{
@@ -64,7 +108,7 @@ body{
     align-items: center;
     width: max-content;
     width: 100%;
-    height: 200px;
+    height: 300px;
     background-color: var(--mandy-light-red);
 }
 
@@ -72,7 +116,7 @@ body{
 .logo2{
     object-fit: cover;
     margin-top: 20px;
-    height: 130px;
+    height: 200px;
 }
 
 /* Menu  */
@@ -99,6 +143,7 @@ body{
 /* Subtitle */
 .subtitle {
     font-size: var(--bld);
+    color: var(--tundora);
 }
 
 /* Container-Products */
@@ -113,20 +158,20 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, auto));
     gap: 1.5rem;
+    height: 20px;
 }
 
 /* Product */
 .product{
     position: relative;
-    background-color: var(--iron);
+    background-color: var(--white);
     padding: 10px;
     border-radius: 10px;
 }
 
 .product:hover{
     padding: 10px;
-    border: 1px solid var(--black);
-    transition: 0.4s;
+    border: 1px solid var(--iron);
 }
 
 /* image */

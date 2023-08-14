@@ -12,28 +12,48 @@
     <title>Academlo Store</title>
 </head>
 <body>
-    <!-- navbar -->
+    <!-- Navbar -->
     <nav class="nav">
         <img class="logo1" src="./img/logo_nombre.png" alt="logo_nombre">
-        <i class='bx bx-cart-alt' id="cart-icon"></i>
+        <!-- Shopping-cart -->
+        <button class="nav-button nav-button-toggle">
+            <i class='bx bx-cart-alt' id="cart-icon"></i>
+        </button>
+        <div class="cart-counter" id="counter">0</div>
+        <!-- Nav-cart-list -->
+        <section class="nav-cart" id="cart">
+            <div id="list-cart"></div>
+            <button class="empty-button" id="empty-cart">Vaciar Carrito</button>
+        </section>
     </nav>
     <!-- Header -->
     <header class="header"><img class="logo2" src="./img/logo_blanco.png" alt="logo"></header>
-    <!-- category -->
+    <!-- Category -->
     <div class="category">
         <h2 class="subtitle">Todos nuestros productos</h2>
         <select name="menu" id="menu">
             <option value="all">Todos</option>
             <option value="shirt">Camisas</option>
-            <option value="sweaters">Sueters</option>
+            <option value="sweaters">Sudaderas</option>
             <option value="hooded-sweatshirts">Sudaderas con capuchas</option>
         </select>
     </div>
-    <!-- products -->
+    <!-- Products -->
     <section class="container">
         <div class="shoping"></div>
     </section>
+    <!-- Modal -->
+    <section class="modal" id="modal-container">
+        <div class="close">
+            <ion-icon name="close-outline" class="modal__icon"></ion-icon>
+        </div>
+        <div id="modal-element" class="modal-view">
+
+        </div>
+    </section>
     <!-- button  -->
-    <button class="btn2">Mas productos</button>
+    <footer>
+        <!-- <button class="btn2">Mas productos</button> -->
+    </footer>
 </body>
 </html>
