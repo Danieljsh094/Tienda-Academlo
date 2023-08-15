@@ -204,6 +204,20 @@ img {
 .product_description {
     max-width: 80%;
 }
+h3{
+    text-align: center;
+    text-transform: uppercase;
+}
+span{
+    text-transform:initial;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+}
+.value{
+    text-align: end;
+}
 
 /* Media queries */
 @media screen and (max-width: 1920px) {

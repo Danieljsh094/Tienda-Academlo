@@ -54,11 +54,18 @@ async function main() {
                 <img  src="${product.image}" alt="imagen de producto"/>
             </div>
             <div class="product_description">
-                <span>Categoria: ${product.category}</span>
-                <span>nombre: ${product.name}</span>
-                <span>descripcion: ${product.description}</span>
-                <span>precio: $${product.price}</span>
-                <span>Stock: ${product.quantity}</span>
+                <h3>${product.category}</h3>
+                <span>${product.name}</span>
+                <br/>
+                <span>${product.description}</span>
+                <div class="footer">
+                <strong>
+                Stock: ${product.quantity}
+                </strong>
+                <strong class="value">
+                Precio: $${product.price}
+                </strong>
+            </div>
             </div>
         </div>
         `        
@@ -66,7 +73,7 @@ async function main() {
     section.innerHTML = html;
 
         const productsHTML=document.querySelector('.shoping');
-         productsHTML.addEventListener('click',function(event){
+        productsHTML.addEventListener('click',function(event){
             if(event.target.classList.contains('list-cart')){
                 const id=Number(event.target.id);
                 const productFind=db.shoping.find(function(product){
@@ -114,7 +121,7 @@ main();
 //      //* Agregar el objeto de infoProduct al array de carProducts, pero hay que validar si el elemento existe o no.
 //     //? El primer if valída si por lo menos un elemento que se encuentre en carProducts es igual al que quiero enviarle en infoProduct.
 //     if( carProducts.some( product => product.id === infoProduct.id ) ){ //True or False
-   
+
 //         const productIncrement = carProducts.map(product => {
 //             if(product.id === infoProduct.id){
 //                 product.quantity++
