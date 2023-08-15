@@ -55,11 +55,11 @@ async function main() {
             </div>
             <div class="product_description">
                 <h3>${product.category}</h3>
-                <span>${product.name}</span>
+                <h2>${product.name}</h2>
                 <br/>
-                <span>${product.description}</span>
+                <p>${product.description}</p>
                 <div class="footer">
-                <strong>
+                <strong class="stock">
                 Stock: ${product.quantity}
                 </strong>
                 <strong class="value">

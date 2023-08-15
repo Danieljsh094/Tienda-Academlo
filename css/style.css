@@ -101,6 +101,7 @@ body{
     left: 60%;
 }
 
+/* Empty Button */
 .empty-button {
     border: none;
     width: 150px;
@@ -135,7 +136,7 @@ body{
     height: 200px;
 }
 
-/* Menu  */
+/* Sub Menu  */
 #menu{
     display: flex;
     align-items: center;
@@ -172,8 +173,9 @@ body{
 /* Products */
 .shoping{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    margin-top: 2.5rem;
+    gap: 2.5rem;
     height: 20px;
 }
 
@@ -182,12 +184,16 @@ body{
     position: relative;
     background-color: var(--white);
     padding: 10px;
-    border-radius: 10px;
+    transform: scale(1.5s);
+    transition:all .5s ease-in-out;
 }
 
 .product:hover{
     padding: 10px;
-    border: 1px solid var(--iron);
+    border-radius: 20px;
+    scale: 1.1;
+    cursor: pointer;
+    box-shadow: 0px -1px 22px 0px var(--iron);
 }
 
 /* image */
@@ -195,27 +201,67 @@ img {
     max-width: 80%;
 }
 
+.product_img img:hover {
+    transform: rotate(20deg);
+    transition: all 0.5s ease;
+}
+
 .product_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: auto;
     margin-bottom: 0.5rem;
 }
 
+/* Descriptions */
 .product_description {
-    max-width: 80%;
+    font-size: var(--rg);
+    background-color: var(--hint-red-light);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
 }
+
+/* Name Product */ 
+h2 {
+    font-size: var(--rg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Category Product */
 h3{
     text-align: center;
     text-transform: uppercase;
 }
-span{
+
+/* Descriptions Product */
+p{
+    display: none;
+    margin: 0 auto;
+    text-align: justify;
     text-transform:initial;
+    font-size: var(--rg);
 }
+
+/* Stock & Price */
 .footer{
     display: flex;
     flex-direction: column;
 }
+
+/* Stock */
+.stock {
+    font-size: var(--rg);
+}
+
+/* Price */
 .value{
+    font-size: var(--bld);
+    margin-top: 20px;
     text-align: end;
 }
 
