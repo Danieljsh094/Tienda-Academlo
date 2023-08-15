@@ -65,6 +65,7 @@ async function main() {
                 <strong class="value">
                 Precio: $${product.price}
                 </strong>
+                <button class="button"> Agregar al carrito </button>
             </div>
             </div>
         </div>

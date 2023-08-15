@@ -202,7 +202,7 @@ img {
 }
 
 .product_img img:hover {
-    transform: rotate(20deg);
+    transform: rotate(10deg);
     transition: all 0.5s ease;
 }
 
@@ -217,7 +217,7 @@ img {
 
 /* Descriptions */
 .product_description {
-    font-size: var(--rg);
+    font-size: 14px;
     background-color: var(--hint-red-light);
     border-radius: 10px;
     padding: 15px;
@@ -261,8 +261,19 @@ p{
 /* Price */
 .value{
     font-size: var(--bld);
-    margin-top: 20px;
+    margin: 10px auto;
     text-align: end;
+}
+
+/* Button de los productos */
+.button {
+    border-radius:50px;
+    color: var(--hint-red-light);
+    background-color: var(--mandy-light-red);
+    margin: 5px auto;
+    padding: 10px;
+    font-size: 12px;
+    cursor: pointer;
 }
 
 /* Media queries */
