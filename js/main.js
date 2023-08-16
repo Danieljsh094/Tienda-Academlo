@@ -31,22 +31,18 @@ async function getApi() {
     try {
         const data = await fetch(base_url);
         const res = await data.json();
+        window.localStorage.setItem('shoping',JSON.stringify(res));
         // console.log(res);
         return res;     
     } catch (error) {
         console.log(error);
     }
 }
-
-//* 2. Renderizar los productos capturados de la API en mi HTML.
-async function main() {
-    const products = await getApi();
-    console.log(products);
-    const section = document.querySelector('.shoping');
-    console.log(section);
+function printproducts(db){
+    const productHTML= document.querySelector('.shoping');
     let html = '';
     // console.log(html);
-    for (const product of products) {
+    for (const product of db.shoping) {
         console.log(product);
         html += `
         <div class="product">
@@ -65,33 +61,81 @@ async function main() {
                 <strong class="value">
                 Precio: $${product.price}
                 </strong>
-                <button class="button"> Agregar al carrito </button>
+                <button class="button"id=${product.id}> Agregar al carrito </button>
             </div>
             </div>
         </div>
         `        
     }
-    section.innerHTML = html;
-
-        const productsHTML=document.querySelector('.shoping');
-        productsHTML.addEventListener('click',function(event){
-            if(event.target.classList.contains('list-cart')){
-                const id=Number(event.target.id);
-                const productFind=db.shoping.find(function(product){
-                    return product.id ===id;
-                })
-                console.log(productFind)
-                if(db.car[productFind.id]){
-                    db.car[productFind.id].amount++;
-                }else{
-                    productFind.amount =1;
-                    db.car[productFind.id]=productFind;
-                }
-                console.log(db.car)
-                window.localStorage.setItem('cart', JSON.stringify(db.car));
+    productHTML.innerHTML = html;
+}
+function addcarrito(db){
+    const productsHTML=document.querySelector('.shoping');
+    productsHTML.addEventListener('click',function(event){
+        if(event.target.classList.contains('button')){
+            const id=Number(event.target.id);
+            const productFind=db.shoping.find(function(product){
+                return product.id ===id;
+            })
+            console.log(productFind)
+            if(db.car[productFind.id]){
+                db.car[productFind.id].amount++;
+            }else{
+                productFind.amount =1;
+                db.car[productFind.id]=productFind;
             }
-        })
-    // console.log(html);
+            console.log(db.car)
+            window.localStorage.setItem('car', JSON.stringify(db.car));
+            imprimcar(db);
+        }   
+})
+}
+function imprimcar(db){
+    const car_compra=document.querySelector('.car_compra');
+    let html='';
+    for(const product in db.car){
+        const{quantity,price,name,image,id,amount}=db.shoping[product];
+        html+=`
+        <div class="car_compra">
+        <div class="product_img">
+            <img  src="${image}" alt="imagen de producto"/>
+        </div>
+        <div class="product_description">
+            <h2>${name}</h2>
+            <br/>
+            <div class="footer">
+            <strong class="stock">
+            Stock: ${quantity}
+            </strong>
+            <strong class="value">
+            Precio: $${price}
+            </strong>
+            <div class='cantidad_car'id=${id}> 
+            <b class='less'>-</b>
+            <spam>${amount}</spam>
+            <b class='plus'>+</b>
+            <img class='trash'src='"/img/basurero.png" alt='trash'>
+            </div>
+        </div>
+        </div>
+    </div>
+    `
+    }
+    car_compra.innerHTML=html;
+}
+
+//* 2. Renderizar los productos capturados de la API en mi HTML.
+async function main() {
+   const db={
+    shoping: JSON.parse(window.localStorage.getItem('shoping')) ||await getApi(),
+    car:JSON.parse(window.localStorage.getItem('car'))||{},
+
+   }
+    printproducts(db);
+    addcarrito(db);
+    imprimcar(db);
+        
+   
 }
 main();
 
