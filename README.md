@@ -5,5 +5,4 @@
   <li>Emerson Almeida</li>
   <li>Rober Contreras</li>
   <li>Ismael Erazo</li>
-  <li>Fernando Pacheco</li>
 </ul>
